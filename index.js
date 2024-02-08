@@ -31,6 +31,13 @@ app.use(bodyParser.json());
 
 
 
+useNewUrlParser:true,
+useUnifiedtopology:true,
+}).then((x)=>{
+    console.log('working')
+}).catch((err)=>{
+    console.log('boo no')
+})
 
 
 
@@ -42,7 +49,6 @@ app.use(cors());
 
 
 
-app.options('*', cors()); // Enable preflight requests for all routes
 
 
 app.use((req, res, next) => {
